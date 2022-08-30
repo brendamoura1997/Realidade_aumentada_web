@@ -20,7 +20,7 @@ que sofrem alteração na sua cor mediante o movimento da mão. Para mais inform
 ## Trabalho Final: Jogo Genius com Realidade Aumentada <br />
 O jogo tem como objetivo testar a memória do usuário, nele o jogador é apresentado a uma sequência que combina cores e som (cada cor é 
 associada a um som) que é replicada um certo tempo depois de sua execução. O jogo é construído contendo 3 sequências, se durante o jogo o 
-usuário errar qualquer um dos elementos ele perderá a partida. Se finalizar as 3 sequências sem errar nenhum elemento ele será declado 
+usuário errar qualquer um dos elementos ele perderá a partida. Se finalizar as 3 sequências sem errar nenhum elemento ele será declarado 
 vencedor. 
 
 * Como jogar: <br /><br />
