@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mapeamento de pixels</title>
+</head>
+
+<body>
+    <video id="video" autoplay></video>
+    <!-- canvas 1 para detecção de diferença -->
+    <canvas id="cv1"></canvas>
+    <!-- canvas 2 para mostrar a diferença -->
+    <canvas id="cv2"></canvas>
+    <script>
+        // pixel e limite de imagem:
+
+        const constraints = {
+            audio: false,
+            video: { width: 640, height: 480 }
+        };
+
+		navigator.mediaDevices.getUserMedia({video: true}).then(function (mediaStream) {
+
+		    video.srcObject = mediaStream;
+		    video.play();
+		    video.style.transform = "scale(-1,1)";
+
+		})
+		.catch(function (err) {
+		    console.log('Não foram concedidas permissões para acessar a webcam')
+		})
+
+        const video = document.getElementById('video');
+
+        // cria contexto para a tela 1
+        const tela = document.querySelector('#cv1');
+        tela.width = 640;
+        tela.height = 480;
+        tela.style.transform = "scale(-1,1)";
+        const contexto = tela.getContext('2d');  
+
+        // cria contexto para a tela 1
+        const tela2 = document.querySelector('#cv2');
+        tela2.width = 640;
+        tela2.height = 480;
+        tela2.style.transform = "scale(-1,1)"
+        const contexto2 = tela2.getContext('2d');
+
+        setInterval(capturar, 100); //intervalo em milissegungos que está capturando as imagens
+        let fase = 0;
+
+        function capturar() {
+
+            fase++;
+
+            if (fase == 2) {
+                // fase dois: a diferença está disponível
+                fase = 0;
+                // obter dados de imagem:
+                const imgData = contexto.getImageData(0, 0, 640, 480); 
+                contexto.globalCompositeOperation = 'copy'; 
+                contexto.drawImage(video, 0, 0, 640, 480); 
+
+
+                contexto2.putImageData(imgData, 0, 0);
+     
+
+                // na próxima fase, a diferença deve ser criada:
+                contexto.globalCompositeOperation = 'difference';
+            } else {
+          
+                contexto.drawImage(video, 0, 0, 640, 480);
+            }
+        }
+    </script>
+</body>
+
+</html>

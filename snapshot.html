@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapshot</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <video id="video" autoplay width="640" height="480"></video>
+            <button onclick="takePicture()">Foto</button>
+        </div>      
+
+        <div class="container">
+            <canvas id="snapshot" width="640" height="480"></canvas>
+            <button onclick="downloadImage()">Download</button>
+        </div>
+    </div>
+
+    <style>
+        .content {
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        button {
+            margin-top: 10%;
+            width: 90%;
+            align-self: center;
+            border: 2px solid #3C8587;
+            border-radius: 5px;
+            font-size: 26px;
+            background: white;
+        }
+
+        button:hover {
+            background: #3C8587;
+            color: #F0F0F0;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        const constraints = { audio: false, video: true };
+        
+        navigator.getUserMedia(constraints, success, () => console.error(error));
+
+        var localStream = null;
+        var currentImage = null;
+        var video = document.getElementById('video');
+
+        function success(stream) {
+            localStream = stream;
+
+            video.srcObject = stream
+            video.play();
+        }
+
+        var canvas = document.getElementById('snapshot');
+        var context = canvas.getContext('2d');
+
+        function takePicture() {
+            if (localStream) {
+                canvas.width = video.offsetWidth;
+                canvas.height = video.offsetHeight;
+
+                context.drawImage(video, 0, 0);
+                currentImage = context.getImageData(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        function downloadImage() {
+            var link = document.createElement('a');
+            link.download = 'snapshot.png';
+            link.href = canvas.toDataURL("image/png")
+            link.click();
+        }
+    </script>
+</body>
+</html>
