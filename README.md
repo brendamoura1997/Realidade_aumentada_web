@@ -32,7 +32,7 @@ botão Jogar. <br /><br />
 conforme a sequência apresentada. <br /><br />
 ![tela02](https://user-images.githubusercontent.com/95611970/187529908-ed009df3-8087-47e7-989c-6bf8a67a36a4.jpg)
 
-3- Caso o usuário perca o jogo, pode clicar em "Jogar novamente" para nova tentativa. <br /><br />
+3- Caso o usuário perca o jogo, pode clicar em "Jogar de novo" para nova tentativa. <br /><br />
 ![tela03](https://user-images.githubusercontent.com/95611970/187530022-82f2450e-acc3-42c0-a4b2-ec496f86fc8c.jpg)
 
 
