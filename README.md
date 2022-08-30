@@ -14,7 +14,8 @@ quadro para outro do vídeo. A técnica do mapeamento de pixel, utiliza do modo 
 houve alteração entre os quadros que forma um determinado vídeo, e diante dessa mudança mapear onde ocorreu movimento. Nos dois
 primeiros quadros a imagem inicial e no quadro final o que se denomina de mapa de movimento. Onde se enxerga apenas a silhueta dos pixels 
 que sofrem alteração na sua cor mediante o movimento da mão. Para mais informações consultar pdf explicacao-mapa-movimento.pdf. <br /><br />
-![mapa-de-movimento](https://user-images.githubusercontent.com/95611970/187528691-4b5a8764-6515-475e-a885-1e01b2c431f0.jpg)
+![mapa-de-movimento](https://user-images.githubusercontent.com/95611970/187537177-1892b009-8244-4590-b470-2d0f129af76f.jpg)
+
 
 ## Trabalho Final: Jogo Genius com Realidade Aumentada <br />
 O jogo tem como objetivo testar a memória do usuário, nele o jogador é apresentado a uma sequência que combina cores e som (cada cor é 
