@@ -21,16 +21,15 @@ O jogo tem como objetivo testar a memória do usuário, nele o jogador é aprese
 associada a um som) que é replicada um certo tempo depois de sua execução. O jogo é construído contendo 3 sequências, se durante o jogo o 
 usuário errar qualquer um dos elementos ele perderá a partida. Se finalizar as 3 sequências sem errar nenhum elemento ele será declado 
 vencedor. 
+
 * Como jogar: <br/>
 1- Na tela inicial, clique nos botões Verde, Vermelho, Amarelo e Azul para ouvir o som. Memorize e clique no botão Jogar
 ![tela01](https://user-images.githubusercontent.com/95611970/187529867-ee7130b0-ab44-4eac-be21-b70ad8eb54dc.jpg)
 
-<br />
 2- Na tela para jogar, clique no botão iniciar e ouça sequência de som. Utilize sua mão para selecionar as cores que emitiram o som
 conforme sequência apresentada.
 ![tela02](https://user-images.githubusercontent.com/95611970/187529908-ed009df3-8087-47e7-989c-6bf8a67a36a4.jpg)
 
-<br />
 3- Tela quando o usuário perde <br />
 ![tela03](https://user-images.githubusercontent.com/95611970/187530022-82f2450e-acc3-42c0-a4b2-ec496f86fc8c.jpg)
 
