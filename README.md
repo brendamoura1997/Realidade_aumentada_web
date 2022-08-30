@@ -22,7 +22,7 @@ associada a um som) que é replicada um certo tempo depois de sua execução. O 
 usuário errar qualquer um dos elementos ele perderá a partida. Se finalizar as 3 sequências sem errar nenhum elemento ele será declado 
 vencedor. 
 
-* Como jogar: <br />
+* Como jogar: <br /><br />
 1- Na tela inicial, clique nos botões Verde, Vermelho, Amarelo e Azul para ouvir o som. Memorize o som relacionado à cor e clique no 
 botão Jogar. <br /><br />
 ![tela01](https://user-images.githubusercontent.com/95611970/187529867-ee7130b0-ab44-4eac-be21-b70ad8eb54dc.jpg)
